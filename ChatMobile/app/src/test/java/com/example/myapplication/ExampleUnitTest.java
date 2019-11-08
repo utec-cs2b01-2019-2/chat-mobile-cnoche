@@ -1,4 +1,4 @@
-package cs2b01.utec.chat_mobile;
+package com.example.myapplication;
 
 import org.junit.Test;
 
