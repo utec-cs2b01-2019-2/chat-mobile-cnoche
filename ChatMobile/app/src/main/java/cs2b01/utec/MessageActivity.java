@@ -17,27 +17,18 @@ import org.json.JSONArray;
 
 public class MessageActivity extends AppCompatActivity {
 
-    RecyclerView mRecyclerView;
-    RecyclerView.Adapter mAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
         String username = getIntent().getExtras().getString("username");
-        setTitle("@"+username);
-        mRecyclerView = findViewById(R.id.main_recycler_view);
+        setTitle("@"+username); 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         getMessages();
-    }
-
-    public Activity getActivity(){
-        return this;
     }
 
     public void getMessages(){
@@ -52,9 +43,7 @@ public class MessageActivity extends AppCompatActivity {
                 new Response.Listener<JSONArray>(){
                     @Override
                     public void onResponse(JSONArray response) {
-                        //TODO process response
-                        mAdapter = new MessageAdapter(response, getActivity(), userFromId);
-                        mRecyclerView.setAdapter(mAdapter);
+                
                     }
                 },
                 new Response.ErrorListener(){

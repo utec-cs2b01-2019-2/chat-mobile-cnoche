@@ -13,16 +13,16 @@
         android:padding="20dp"
         >
 
+
         <EditText
             android:id="@+id/txtMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Type message here"
+            android:hint="Type here"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@id/btnSend"
             />
-
         <Button
             android:id="@+id/btnSend"
             android:layout_width="wrap_content"
